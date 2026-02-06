@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+<div class="container">
+    <h2>Cadastrar
+    <form action="processar.php" method="POST" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="id">Código Identificador (ID):</label>
+            <input type="text" id="id" name="id" required>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Título do Produto:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Preço:</label>
+            <input type="number" id="price" name="price" step="0.01" min="0" required>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Categoria:</label>
+            <select id="category" name="category" required>
+                <option value="">Selecione...</option>
+                <option value="electronics">Eletrônicos</option>
+                <option value="clothing">Vestuário</option>
+                <option value="home">Casa & Decoração</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Descrição Detalhada:</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="image">Imagem do Produto:</label>
+            <input type="file" id="image" name="image" accept="image/png, image/jpeg, image/webp" required>
+        </div>
+
+        <button type="submit" name="btn_cadastrar" class="btn-submit">Cadastrar Produto</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+
